@@ -123,4 +123,5 @@ class ParserConvs:
     result['company_name'] =\
        mng_data.loc[mng_data['company_name']!='No company name', 'company_name'].tolist()
     result['goodbye'] = mng_data.loc[mng_data['goodbye']!='No goodbye', 'goodbye'].tolist()
+    result['check_gr_db'] = (len(result['greeting']) > 0) and (len(result['goodbye']) > 0)
     return result
